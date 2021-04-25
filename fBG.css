@@ -1,0 +1,109 @@
+body {
+    background: #555;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+    max-height: fit-content;
+    background-color: #cccccc;
+}
+
+.bloco1 {
+    border: 2px rgba(54, 54, 255, 0.349);
+    border-radius: 10px;
+    background-color: rgba(54, 54, 255, 0.349);
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.espaco {
+    padding: 2%;
+}
+
+.p {
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 123, 0);
+    padding: 2%;
+    color: white;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 200%;
+}
+
+input {
+    width: 85%;
+    line-height: 20px;
+    display: table-cell;
+    border-radius: 5px;
+    line-height: 300%;
+    padding-left: 5%;
+}
+
+.botao {
+    color: white;
+    padding: 2%;
+    font-size: 100%;
+    width: 50%;
+    border-radius: 3px;
+    display: inline-block;
+    user-select: none;
+}
+
+.botao2 {
+    color: white;
+    font-size: 100%;
+    width: 70%;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.t {
+    text-align: center;
+}
+
+.botao:hover,
+.botao2:hover,
+.voltar:hover {
+    cursor: pointer;
+}
+
+.botao:active,
+.botao2:active,
+.voltar:active {
+    transform: translateY(4px);
+}
+
+.social {
+    padding: 5%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+footer {
+    padding-top: 20%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 70%;
+}
+
+.img {
+    width: 15%;
+    height: 15%;
+}
+
+.voltar {
+    width: 15%;
+    height: 15%;
+}
