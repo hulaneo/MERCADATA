@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-<script src="./fBG.js"></script>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./fBG.css">
+    <script src="./fBG.js"></script>
     <title>Factory Business Game</title>
 </head>
 
 <body>
+    <div class="pagina" id="fBGSecondMenu"></div>
     <div class="content">
         <img class="logo" src="./img/fbgLogo.svg">
         <div class="espaco"></div>
@@ -16,7 +18,7 @@
             <p class="t">Continuar</p>
         </div>
         <div class="espaco"></div>
-        <div class="p botao2">
+        <div class="p botao2" id="entrar">
             <img class="img" src="./img/novoJogo.svg">
             <p class="t">Novo Jogo</p>
         </div>
@@ -30,8 +32,8 @@
             <img class="img" src="./img/historicoJogadas.svg">
             <p class="t">Histórico de Jogadas</p>
         </div>
-        <footer style="overflow:auto">
-            <img class="voltar" style="float:left;padding-bottom:3%;padding-left:3%" src="./img/voltar.svg">
+        <footer>
+            <img class="voltar" src="./img/voltar.svg">
         </footer>
     </div>
 </body>

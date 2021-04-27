@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<script src="./fBG.js"></script>
-<script src="./fBG.css"></script>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./fBG.css">
+    <script src="./fBG.js"></script>
     <title>Factory Business Game</title>
 </head>
 
 <body>
+    <div class="pagina" id="fBGSelecaoFabrica"></div>
     <div class="content">
         <div class="tituloFabrica">
             <h1>Monte sua fábrica</h1>
@@ -17,10 +18,10 @@
         <div style="overflow:auto">
             <img class="fabrica" src="./img/fpequena.svg" style="float:left">
             <img class="fabrica" src="./img/fmedia.svg" style="float:right">
-            <img class="fabrica" src="./img/fgrande.svg" style="display: inline-block;margin-left:25%">
+            <img id="grande" class="fabrica" src="./img/fgrande.svg" style="display: inline-block;margin-left:25%">
         </div>
-        <footer style="overflow:auto">
-            <img class="homem" src="./img/man.svg">
+        <footer>
+            <div><img class="homem" src="./img/man.svg"></div>
             <div class="fala">Escolha seu <b>tipo</b> de Fabrica. Isso irá afetar seu início de jogo.</div>
         </footer>
     </div>

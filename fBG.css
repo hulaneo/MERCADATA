@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto;
+    height: 100%;
 }
 
 .logo {
@@ -14,8 +15,10 @@ body {
     max-width: 350px;
     margin: auto;
     padding: 10px;
+    min-height: 100vh;
     max-height: fit-content;
     background-color: #cccccc;
+    height: 100%;
 }
 
 .bloco1 {
@@ -71,12 +74,19 @@ input {
     margin: auto;
 }
 
+.botao3 {
+    background-color: rgb(255, 123, 0);
+    color: white;
+    user-select: none;
+}
+
 .t {
     text-align: center;
 }
 
 .botao:hover,
 .botao2:hover,
+.botao3,
 .voltar:hover,
 .fabrica:hover {
     cursor: pointer;
@@ -84,6 +94,7 @@ input {
 
 .botao:active,
 .botao2:active,
+.botao3,
 .voltar:active,
 .fabrica:active {
     transform: translateY(4px);
@@ -96,11 +107,10 @@ input {
 }
 
 footer {
-    padding-top: 20%;
-    bottom: 0;
-    left: 0;
     text-align: center;
     font-size: 70%;
+    max-width: 350px;
+    bottom: 10%;
 }
 
 .img {
@@ -143,3 +153,5 @@ footer {
     height: 4.375rem;
     user-select: none;
 }
+
+@media only screen and (min-height: 100%) {}
