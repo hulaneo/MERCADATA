@@ -23,6 +23,9 @@ $(document).ready(function() {
             $('.voltar').click(function() {
                 window.open("./fBGSelecaoFabrica.html", "_self");
             });
+            $('#continuar').click(function() {
+                window.open("./fBGMaquinario.html", "_self");
+            });
             break;
         case "fBGMaquinario":
             $('#disponivel').text(function() {
@@ -69,7 +72,7 @@ $(document).ready(function() {
 
 
             function negPos() {
-                if (parseInt($('#total').attr('value')) < parseInt($('#disponivel').attr('value'))) {
+                if (parseInt($('#total').attr('value')) <= parseInt($('#disponivel').attr('value'))) {
                     return $('#total').attr('class', 'centro positivo')
                 } else {
                     return $('#total').attr('class', 'centro negativo')
@@ -79,21 +82,4 @@ $(document).ready(function() {
             break;
         default:
     }
-
-
-
-
-
-    $('#voltar4').click(function() {
-        window.open("./fBGfabrica.html", "_self");
-    });
-
-    $('#grande').click(function() {
-        window.open("./fBGfabrica.html", "_self");
-    });
-
-    $('#continuar').click(function() {
-        window.open("./fBGMaquinario.html", "_self");
-    });
-
 });
