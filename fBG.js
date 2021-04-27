@@ -25,22 +25,28 @@ $(document).ready(function() {
             });
             break;
         case "fBGMaquinario":
+            $('#disponivel').text(function() {
+                return parseInt($('#disponivel').attr('value')).toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
+            })
             $('#total').text(function() {
-                return $('#disponivel').text();
-            });
+                return parseInt($('#total').attr('value')).toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
+            })
             $('.voltar').click(function() {
                 window.open("./fBGfabrica.html", "_self");
             });
             $('.menos').click(function() {
                 var maq = $(this).parent('div').attr('id');
-                var valor = parseFloat($("#" + maq).find('.valor').text().replaceAll('.', '').replaceAll(',', ''));
-                var total = parseFloat($('#total').text().replaceAll('.', '').replaceAll(',', ''));
                 var qnt = parseInt($("#" + maq).find('#quantidade').text());
+                var valor = parseInt($("#" + maq).find('.valor').text().replaceAll('.', '').replaceAll(',', '').slice(0, -2));
+                var total = parseInt($('#total').attr('value'));
+                var valorTotal = parseFloat(total - valor);
                 $("#" + maq).find('#quantidade').text(function() {
                     if (qnt > 0) {
                         $('#total').text(function() {
-                            return (total + valor).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+                            return valorTotal.toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
                         });
+                        $('#total').attr('value', valorTotal)
+                        negPos();
                         return qnt - 1;
                     }
                 });
@@ -48,15 +54,27 @@ $(document).ready(function() {
             $('.mais').click(function() {
                 var maq = $(this).parent('div').attr('id');
                 var qnt = parseInt($("#" + maq).find('#quantidade').text());
+                var valor = parseInt($("#" + maq).find('.valor').text().replaceAll('.', '').replaceAll(',', '').slice(0, -2));
+                var total = parseInt($('#total').attr('value'));
+                var valorTotal = parseFloat(total + valor);
                 $("#" + maq).find('#quantidade').text(function() {
                     return qnt + 1;
                 });
-                var valor = parseFloat($("#" + maq).find('.valor').text().replaceAll('.', '').replaceAll(',', ''));
-                var total = parseFloat($('#total').text().replaceAll('.', '').replaceAll(',', ''));
                 $('#total').text(function() {
-                    return total - valor;
+                    return valorTotal.toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
                 })
+                $('#total').attr('value', valorTotal)
+                negPos();
             });
+
+
+            function negPos() {
+                if (parseInt($('#total').attr('value')) < parseInt($('#disponivel').attr('value'))) {
+                    return $('#total').attr('class', 'centro positivo')
+                } else {
+                    return $('#total').attr('class', 'centro negativo')
+                }
+            }
 
             break;
         default:

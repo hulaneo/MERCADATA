@@ -154,4 +154,41 @@ footer {
     user-select: none;
 }
 
+.container {
+    width: 100%;
+}
+
+.esquerda {
+    float: left;
+    width: 30%;
+}
+
+.direita {
+    float: right;
+    width: 20%;
+}
+
+.centro {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.cima {
+    background-color: rgb(54, 103, 150);
+    color: white
+}
+
+.baixo {
+    background-color: rgb(42, 77, 108);
+    color: rgb(42, 250, 165);
+}
+
+.positivo {
+    color: white;
+}
+
+.negativo {
+    color: red;
+}
+
 @media only screen and (min-height: 100%) {}

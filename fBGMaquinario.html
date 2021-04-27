@@ -107,13 +107,17 @@
 
         <footer>
             <div>
-                <p>Total</p>
-                <p>R$</p>
-                <p id="total"></p>
-                <p>Disponível</p>
-                <p>R$</p>
-                <p id="disponivel">1.000.000,00</p>
-                <img src="./img/dolar.svg">
+                <div>
+                    <div class="container cima">
+                        <div class="esquerda">Total</div>
+                        <div class="centro" type="text" id="total" value="0"></div>
+                    </div>
+                    <div class="container baixo">
+                        <div class="esquerda baixo">Disponível</div>
+                        <div class="centro" type="text" id="disponivel" value="1000000"></div>
+                    </div>
+                    <img style="float:right;width:23%;padding: 0 10px;" src="./img/dolar.svg">
+                </div>
             </div>
             <input type="button" id="confirmar" value="Confirmar">
         </footer>
