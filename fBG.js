@@ -18,6 +18,9 @@ $(document).ready(function() {
             $('.voltar').click(function() {
                 window.open("./fBGSecondMenu.html", "_self");
             });
+            $('#grande').click(function() {
+                window.open("./fBGfabrica.html", "_self");
+            });
             break;
         case "fBGfabrica":
             $('.voltar').click(function() {
